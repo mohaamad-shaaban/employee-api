@@ -6,6 +6,7 @@ public class EmployeeRequest {
     private String lastName;
     private String email;
     private Long departmentId;
+    private String phone;
 
     public EmployeeRequest() {
     }
@@ -40,5 +41,13 @@ public class EmployeeRequest {
 
     public void setDepartmentId(Long departmentId) {
         this.departmentId = departmentId;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

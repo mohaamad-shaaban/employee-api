@@ -1,0 +1,14 @@
+CREATE TABLE department (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE employee (
+    id BIGSERIAL PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    department_id BIGINT NOT NULL,
+    CONSTRAINT fk_employee_department
+        FOREIGN KEY (department_id) REFERENCES department(id)
+);

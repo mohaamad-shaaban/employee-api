@@ -6,6 +6,6 @@ public record EmployeeResponse(
         String lastName,
         String email,
         Long departmentId,
-        String departmentName
-) {
-}
+        String departmentName,
+        String phone
+) {}

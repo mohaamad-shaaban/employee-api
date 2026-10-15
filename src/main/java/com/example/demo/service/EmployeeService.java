@@ -44,6 +44,7 @@ public class EmployeeService {
         employee.setLastName(request.getLastName());
         employee.setEmail(request.getEmail());
         employee.setDepartment(department);
+        employee.setPhone(request.getPhone()); // <-- أضفنا سطر تعيين الهاتف هنا أيضاً
 
         Employee savedEmployee = employeeRepository.save(employee);
         return toResponse(savedEmployee);
@@ -60,6 +61,7 @@ public class EmployeeService {
         employee.setLastName(request.getLastName());
         employee.setEmail(request.getEmail());
         employee.setDepartment(department);
+        employee.setPhone(request.getPhone());
 
         Employee updatedEmployee = employeeRepository.save(employee);
         return toResponse(updatedEmployee);
@@ -78,7 +80,8 @@ public class EmployeeService {
                 employee.getLastName(),
                 employee.getEmail(),
                 employee.getDepartment().getId(),
-                employee.getDepartment().getName()
+                employee.getDepartment().getName(),
+                employee.getPhone()
         );
     }
 }

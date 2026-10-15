@@ -1,0 +1,4 @@
+INSERT INTO department (name)
+VALUES ('Software Development'),
+       ('Finance'),
+       ('Human Resources');
